@@ -1,0 +1,16 @@
+[project]
+name = "sandbox-failing-project"
+version = "0.1.0"
+description = "Sandbox project with intentional failing tests for detector validation"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = [
+  "unit: unit-level tests",
+  "integration: integration tests",
+  "security: security-oriented tests",
+  "e2e: end-to-end tests",
+]
